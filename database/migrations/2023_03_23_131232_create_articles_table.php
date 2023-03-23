@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -16,8 +15,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('body');
             $table->string('img');
-            $table->foreignId('user_id')->constrained();
-            $table->string('category');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('category')->nullable();
             $table->integer('views');
             $table->integer('nbr_likes');
             $table->integer('nbr_dislikes');

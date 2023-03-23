@@ -17,7 +17,11 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'body' => fake()->text(150),
+            'user_id' => fake()->numberBetween(1, 100),
+            'article_id' => fake()->numberBetween(1, 10000),
+            'nbr_likes' => fake()->numberBetween(0, 100),
+            'nbr_dislikes' => fake()->numberBetween(0, 100),
         ];
     }
 }

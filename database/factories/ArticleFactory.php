@@ -17,7 +17,14 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->title(),
+            'body' => fake()->text(700),
+            'img' => 'https://fakeimg.pl/440x320/',
+            'user_id' => fake()->numberBetween(1, 100),
+            'views' => fake()->numberBetween(0, 450000),
+            'nbr_likes' => fake()->numberBetween(0, 100),
+            'nbr_dislikes' => fake()->numberBetween(0, 100),
+            'category' => fake()->numberBetween(1, 6),
         ];
     }
 }
