@@ -1,0 +1,20 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.18.6",
+        "axios": "^1.1.2",
+        "install": "^0.13.0",
+        "laravel-vite-plugin": "^0.7.2",
+        "npm": "^9.6.2",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@inertiajs/react": "^1.0.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
