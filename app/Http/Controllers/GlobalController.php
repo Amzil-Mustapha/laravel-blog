@@ -9,8 +9,10 @@ use Inertia\Inertia;
 
 class GlobalController extends Controller
 {
-    public function  fetch_home_data(){
+    public function fetch_home_data()
+    {
         $articlesOBV = DB::table('articles')->orderByDesc('views')->get();
-        return Inertia::render('Home' ,compact('articlesOBV'));
+        $users = DB::table('users')->get();
+        return Inertia::render('Home', compact(['articlesOBV', 'users']));
     }
 }
