@@ -5,12 +5,11 @@ import Header from "../Layouts/Header";
 import Main from "../Layouts/Main";
 import Nav from "../Layouts/Nav";
 
-function Home({articles}) {
-    console.log(articles);
+function Home({articlesOBV}) {
     return (
         <>
             <Header />
-            <Main/>
+            <Main articlesOBV={articlesOBV} />
             <Nav/>
             <Footer />
         </>
