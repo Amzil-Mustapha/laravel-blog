@@ -6,7 +6,7 @@
     @vite(['resources/js/app.jsx', 'resources/css/app.css'])
     @inertiaHead
   </head>
-  <body style="font-family: ubuntu">
+  <body style="font-family: ubuntu; overflow: hidden;">
     @inertia
   </body>
 </html>
