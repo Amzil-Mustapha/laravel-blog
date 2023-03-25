@@ -1,23 +1,14 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\GlobalController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-//Route::get('/', function () {
-//    return Inertia::render('Home');
-//});
 
 
-Route::get('/',[\App\Http\Controllers\GlobalController::class, 'fetch_home_data']);
+// Home route to fetch the home data
+Route::get('/', [GlobalController::class, 'fetch_home_data']);
+
+// When the user press at the article Link this route work 
+Route::get('/article/{id}', [GlobalController::class, 'to_article_page']);

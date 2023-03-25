@@ -21,7 +21,13 @@ function Main({ articlesOBV, users }) {
                             key={key}
                             className="bg-cover"
                         >
-                            <div className="bg-black bg-opacity-50 p-5 rounded">
+                            <div
+                                onClick={() => {
+                                    // when you click at the article in main
+                                    router.get(`/article/${article.id}`);
+                                }}
+                                className="bg-black bg-opacity-50 p-5 rounded cursor-pointer hover:bg-opacity-70"
+                            >
                                 <h2 className="text-2xl mb-32 text-white">
                                     {article.title.slice(0, 40)}...
                                 </h2>
